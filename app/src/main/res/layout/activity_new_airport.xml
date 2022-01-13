@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewAirportActivity">
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Latitud: "
+        app:layout_constraintStart_toStartOf="@+id/nameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <TextView
+        android:id="@+id/lngLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Longitud:"
+        app:layout_constraintStart_toStartOf="@+id/latLabel"
+        app:layout_constraintTop_toBottomOf="@+id/latLabel" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/nameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameLabel" />
+
+    <EditText
+        android:id="@+id/latInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="55.123"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/latLabel"
+        app:layout_constraintEnd_toEndOf="@+id/nameInput"
+        app:layout_constraintTop_toTopOf="@+id/latLabel" />
+
+    <EditText
+        android:id="@+id/lngInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="23.511"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/lngLabel"
+        app:layout_constraintEnd_toEndOf="@+id/latInput"
+        app:layout_constraintTop_toTopOf="@+id/lngLabel" />
+
+    <TextView
+        android:id="@+id/shieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Escudo: "
+        app:layout_constraintStart_toStartOf="@+id/lngLabel"
+        app:layout_constraintTop_toBottomOf="@+id/lngLabel" />
+
+    <EditText
+        android:id="@+id/shieldInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="http://shield.png"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/shieldLabel"
+        app:layout_constraintEnd_toEndOf="@+id/lngInput"
+        app:layout_constraintTop_toTopOf="@+id/shieldLabel" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="saveAirport"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shieldInput" />
+</androidx.constraintlayout.widget.ConstraintLayout>
